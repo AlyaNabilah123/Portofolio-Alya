@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Alya</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8mJZ5LhF8Gh47OhuX+cvmbW2czY3/5+6T8A/0" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="img/background.mp4" type="video/mp4">
+        </video>
+    <!-- Bagian Header -->
+    <header>
+        <a href="#" class="logo">Aya</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Project</a>
+        </nav>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div> <!-- Ikon burger -->
+    </header>
+
+    <!-- Konten Utama -->
+<main class="container">
+    <div class="konten-image">
+        <img src="img/alyaa.png" alt="Alya Nabilah">
+    </div>
+    <div class="konten-text">
+        <h1>Hi, It's <span>Alya Nabilah</span></h1>
+        <h3 id="typing"></h3> <!-- Memastikan ID sesuai dengan JavaScript -->
+        <p><span>Pelajar</span> SMKN 2 BANJARMASIN</p>
+        <p>Welcome to my portfolio website!</p>
+        <div class="ikon">
+            <a href="https://wa.me/6285753866454"><i class="fab fa-whatsapp-square"></i></a>
+            <a href="https://www.instagram.com/jc___770/profilecard/?igsh=NnpvaGNwc2s3a3Bt"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:alyanblh007@gmail.com?subject=Halo&body=Ini%20adalah%20pesan%20awalan"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.tiktok.com/@chryusk?_t=8qmT4VFQx5l&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <a href="about.html" class="btn">Click Here</a>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-isi">
+                <h3>Contact Me</h3>
+                <p>Jangan ragu untuk menghubungi melalui email atau WhatsApp untuk pertanyaan apa pun.</p>
+                <div class="footer-ikon">
+                    <a href="mailto:alyanblh007@gmail.com"><i class="fas fa-envelope"></i> alyanblh007@gmail.com</a>
+                    <a href="https://wa.me/6281234567890"><i class="fab fa-whatsapp"></i> +62 857 5386 6454</a>
+                    <a href="https://www.instagram.com/jc___770"><i class="fab fa-instagram"></i> @jc___770</a>
+                    <a href="https://www.tiktok.com/@chryusk"><i class="fab fa-tiktok"></i> @chryusk</a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 Alya Nabilah. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script>
+        // Toggle menu (untuk tampilan mobile)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars'); // Ikon burger
+            menuIcon.classList.toggle('fa-times'); // Ikon X
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const text = "I'm a Web Developer";  
+        const typingText = document.getElementById("typing");
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        typeWriter();
+    });
+</script>
+
+</body>
+</html>
